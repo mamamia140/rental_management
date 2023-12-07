@@ -11,16 +11,18 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String firstName;
 
+    @Column
     private String lastName;
-
+    @Column
     private String email;
-
+    @Column
     private String password;
-
+    @Column
     private double balance;
-
+    @Column
     private Role role;
 
     public User(String firstName, String lastName, String email, String password, double balance, Role role) {
@@ -31,6 +33,11 @@ public class User {
         this.balance = balance;
         this.role = role;
     }
+
+    public User() {
+
+    }
+
 
     public String getFirstName() {
         return firstName;
