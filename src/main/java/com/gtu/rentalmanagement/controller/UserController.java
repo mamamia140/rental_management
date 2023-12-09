@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+import static java.lang.Long.parseLong;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -30,5 +32,10 @@ public class UserController {
     @PostMapping
     public User saveUser(@RequestBody User user){
         return userService.saveUser(user);
+    }
+
+    @RequestMapping(value="users", method = RequestMethod.GET)
+    public @ResponseBody Optional<User> getUser(@RequestParam("id") String userId){
+        return userService.findById(parseLong(userId));
     }
 }

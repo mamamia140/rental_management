@@ -12,9 +12,6 @@ public class Bicyle {
     @Embedded
     private GPSLocation location;
 
-    @Column(name = "type")
-    private BicyleType type;
-
     @Column
     private double batteryPercentage;
     public void setId(Long id) {
@@ -31,14 +28,6 @@ public class Bicyle {
 
     public void setLocation(GPSLocation location) {
         this.location = location;
-    }
-
-    public BicyleType getType() {
-        return type;
-    }
-
-    public void setType(BicyleType type) {
-        this.type = type;
     }
 
     public double getBatteryPercentage() {
