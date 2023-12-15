@@ -12,4 +12,8 @@ public interface UserService {
     User saveUser(User user);
 
     List<User> findAllUsers();
+
+    Optional<User> findUserByEmail(String email);
+
+    boolean validateUser(String email, String password);
 }

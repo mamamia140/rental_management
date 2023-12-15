@@ -26,6 +26,17 @@ public class UserServiceImplementation implements UserService {
         return userRepository.findAll();
     }
 
+    @Override
+    public Optional<User> findUserByEmail(String email){
+        return userRepository.findUserByMail(email);
+    }
+
+    @Override
+    public boolean validateUser(String email, String password) {
+
+        return userRepository.validateCredentials(email, password) == 1;
+    }
+
     public UserServiceImplementation(UserRepository userRepository) {
         this.userRepository = userRepository;
 

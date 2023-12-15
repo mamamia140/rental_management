@@ -29,13 +29,17 @@ public class UserController {
         return userService.findById(id);
     }
 
+
     @PostMapping
     public User saveUser(@RequestBody User user){
         return userService.saveUser(user);
     }
 
-    @RequestMapping(value="users", method = RequestMethod.GET)
-    public @ResponseBody Optional<User> getUser(@RequestParam("id") String userId){
-        return userService.findById(parseLong(userId));
+
+    @GetMapping("checkCredentials")
+    public boolean checkCredentials(@RequestParam("email") String email, @RequestParam("password") String password){
+        return userService.validateUser(email,password);
     }
+
+
 }
