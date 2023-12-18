@@ -17,7 +17,7 @@ public class Rental {
     private User user;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn
-    private Bicyle bicyle;
+    private Bicycle bicycle;
 
     @Column
     private Long duration;
@@ -44,12 +44,12 @@ public class Rental {
         this.user = user;
     }
 
-    public Bicyle getBicyle() {
-        return bicyle;
+    public Bicycle getBicyle() {
+        return bicycle;
     }
 
-    public void setBicyle(Bicyle bicyle) {
-        this.bicyle = bicyle;
+    public void setBicyle(Bicycle bicycle) {
+        this.bicycle = bicycle;
     }
 
     public Long getDuration() {

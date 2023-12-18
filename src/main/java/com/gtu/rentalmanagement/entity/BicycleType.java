@@ -1,5 +1,5 @@
 package com.gtu.rentalmanagement.entity;
 
-public enum BicyleType {
+public enum BicycleType {
     REGULAR,ELECTRIC;
 }

@@ -14,7 +14,7 @@ public class Reservation {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn
-    private Bicyle bicyle;
+    private Bicycle bicycle;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn
@@ -34,12 +34,12 @@ public class Reservation {
         return id;
     }
 
-    public Bicyle getBicyle() {
-        return bicyle;
+    public Bicycle getBicyle() {
+        return bicycle;
     }
 
-    public void setBicyle(Bicyle bicyle) {
-        this.bicyle = bicyle;
+    public void setBicyle(Bicycle bicycle) {
+        this.bicycle = bicycle;
     }
 
     public User getUser() {

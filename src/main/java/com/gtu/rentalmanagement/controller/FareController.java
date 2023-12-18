@@ -1,11 +1,7 @@
 package com.gtu.rentalmanagement.controller;
 
-import com.gtu.rentalmanagement.entity.BicyleType;
 import com.gtu.rentalmanagement.entity.Fare;
-import com.gtu.rentalmanagement.entity.User;
 import com.gtu.rentalmanagement.service.FareService;
-import com.gtu.rentalmanagement.service.UserService;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

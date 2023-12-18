@@ -3,8 +3,8 @@ package com.gtu.rentalmanagement.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "bicyles")
-public class Bicyle {
+@Table(name = "bicycles")
+public class Bicycle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

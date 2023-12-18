@@ -1,6 +1,5 @@
 package com.gtu.rentalmanagement.service.implementation;
 
-import com.gtu.rentalmanagement.entity.BicyleType;
 import com.gtu.rentalmanagement.entity.Fare;
 import com.gtu.rentalmanagement.repository.FareRepository;
 import com.gtu.rentalmanagement.service.FareService;
