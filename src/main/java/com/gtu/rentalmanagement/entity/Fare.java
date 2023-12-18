@@ -11,16 +11,11 @@ public class Fare {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn
-    private Bicyle bicyle;
-
     private double openingFare;
 
     private double perMinuteFare;
 
-    public Fare(Bicyle bicyle, double openingFare, double perMinuteFare){
-        this.bicyle = bicyle;
+    public Fare(double openingFare, double perMinuteFare){
         this.openingFare = openingFare;
         this.perMinuteFare = perMinuteFare;
     }
@@ -36,14 +31,6 @@ public class Fare {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Bicyle getBicyle() {
-        return bicyle;
-    }
-
-    public void setBicyle(Bicyle bicyle) {
-        this.bicyle = bicyle;
     }
 
     public double getOpeningFare() {

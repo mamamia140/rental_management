@@ -14,6 +14,11 @@ public class Bicyle {
 
     @Column
     private double batteryPercentage;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn
+    private Fare fare;
+
     public void setId(Long id) {
         this.id = id;
     }
